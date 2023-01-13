@@ -1,0 +1,15 @@
+package ch6;
+class Card{
+	String color;
+	String gearType;
+	int door;
+}
+public class CardTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+   
+	}
+
+}
