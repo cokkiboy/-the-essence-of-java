@@ -6,4 +6,34 @@
 예를 들어 새로 작성하려는 클래스의 이름이 Child이고 상속받고자 하는 기존 클래스의 이름이 Parent라면 다음과 같이하면된다<br>
 class Child(자손클래스),(sub class) extends Parent(조상클래스),상위(super)클래스{
 }
-<h2></h2>
+<h2>overriding</h2>
+<h3> 오버라이딩이란</h3>
+조상 클래스로부터 상속받은 메서드의 내용을 변경하는 것을 오버라이딩이라고한다. 상속받은 메서드를 그대로 사용하기도 하지만. 자손 클래스 자신에 맞게 변경해야하는경우가 많다.
+이럴떄 조상의 메서드를 오버라이딩한다.<br>
+
+class Point{
+  int x;
+  int y;<br>
+ <br> String getLocation(){
+      return "x:"+x+",y:"+y;
+  }
+}
+class Point3D extends Point{
+ int z;
+  String  getLocation(){
+      return "x:"+x+",y:"+y+",z:"+z;
+  }
+}<br>
+Point클래스의 getLocation() 은 한점의 x,y좌표를 문자열로 반환하도록 작성 되었다.<br>
+이 두클래스 는 서로 상속관계에 있으므로Point3D클래스는 Point클래스로부터 getLocation()을 상속받지만,Point3D클래스 는 3차원 좌표계의 한점을 표현하기 위한 것이다. 그래서 이메서드를 Point3D클래스 자신에 맞게 z축의 좌표값도 포함하여 반환하도록 오버라이딩 하였다.<br>
+Point클래스를 사용하던 사람들은  새로 작성된 Point3D 클래스가 Point 클래스의 자손이므로 Point3D의 인스턴스에 getLocaion()을 호출하면 Point클래스의 getLocation()이 그랬듯이 점의 좌표를 문자열로 얻을 수 있을거락 기대할 것이다. 그렇기 떄문에 새로운 메서드를 제공하는 것보다 오버라이딩을 하는것이 바른 선택이다 
+
+<h3>오버라이딩 조건</h3>
+<h4>자손클래스에서 오버라이딩하는 메서드는 조상 클래스의 매서드 와<h4>
+1.이름이 같아야한다<br>
+2.매개변수가 같아야한다<br>
+3.반환타입이 같아야한다<br>
+4.접근 제어자는 조상 클래스의 메서드보다 좁은 범위로 변경할수없다.
+  public > protected>(default)>private
+  
+
