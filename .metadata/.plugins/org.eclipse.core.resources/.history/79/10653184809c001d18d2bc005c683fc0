@@ -1,0 +1,16 @@
+package ch11;
+
+import java.util.*;
+
+public class TreeSetLotto {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Set set = new TreeSet();
+     for (int set = 0; set < args.length; set++) {
+		String string = args[set];
+		
+	}
+	}
+
+}
